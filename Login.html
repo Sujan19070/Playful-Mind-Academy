@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playful Mind Academy | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <div class="brand">
+                <div class="logo-mark" aria-hidden="true">
+                    <span class="logo-dot"></span>
+                    <span class="logo-bars"></span>
+                </div>
+                <div>
+                    <p class="eyebrow">Playful Mind Academy</p>
+                    <p class="brand-title">Welcome back</p>
+                </div>
+            </div>
+            <nav class="nav-actions" aria-label="Main">
+                <a class="ghost-link" href="WelcomePage.html">Home</a>
+                <a class="ghost-link" href="Registration.html">Register</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="hero-copy">
+                <p class="tag">Login</p>
+                <h1>Sign in to continue learning</h1>
+                <p class="lede">Access your projects, live sessions, and mentor feedback. Use the email you registered with.</p>
+                <ul class="highlights" aria-label="Benefits">
+                    <li><span class="pill">Live calendar</span></li>
+                    <li><span class="pill">Progress tracker</span></li>
+                    <li><span class="pill">Community access</span></li>
+                </ul>
+            </section>
+
+            <section class="card" aria-label="Login form">
+                <form id="login-form" novalidate>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" minlength="8" placeholder="Your password" required>
+                    </div>
+                    <div class="field checkbox">
+                        <input id="remember" name="remember" type="checkbox">
+                        <label for="remember">Remember me on this device</label>
+                    </div>
+                    <div class="actions">
+                        <button class="solid-btn" type="submit">Sign in</button>
+                        <a class="link" href="#" data-demo="reset">Forgot password?</a>
+                    </div>
+                    <p class="form-foot">New here? <a class="link" href="Registration.html">Create an account</a></p>
+                </form>
+            </section>
+        </main>
+
+        <section class="banner" id="status-banner" hidden aria-live="polite">
+            <div class="banner-dot"></div>
+            <p id="status-text"></p>
+            <button class="ghost-btn" type="button" id="banner-dismiss">Dismiss</button>
+        </section>
+    </div>
+
+    <script src="Login.js" defer></script>
+</body>
+</html>
