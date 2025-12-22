@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Playful Mind Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            font-size: 2rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            color: white;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            animation: fadeInDown 0.6s ease;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-card h3 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Learning Paths */
+        .section-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title span {
+            font-size: 2rem;
+        }
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .learning-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .learning-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .learning-card-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .learning-card-header.math {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .learning-card-header.science {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .learning-card-header.language {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .learning-card-header.art {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .learning-card-header.coding {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+
+        .learning-card-header.music {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .learning-card-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .learning-card-body {
+            padding: 1.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .learning-card-body p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .start-btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .start-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .action-btn {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .action-icon {
+            font-size: 2.5rem;
+        }
+
+        /* Achievements */
+        .achievements {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 15px;
+            background: #f5f7fa;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .badge-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-name {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .badge.locked {
+            opacity: 0.4;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .welcome-section h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span>🎓</span>
+                <span>Playful Mind Academy</span>
+            </div>
+            <div class="user-info">
+                <span>Welcome, Student!</span>
+                <div class="user-avatar">S</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1>🎉 Welcome Back, Student!</h1>
+            <p>Ready to learn something amazing today? Let's continue your learning adventure!</p>
+        </section>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <h3>24</h3>
+                <p>Lessons Completed</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <h3>156</h3>
+                <p>Points Earned</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <h3>8</h3>
+                <p>Badges Unlocked</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <h3>7</h3>
+                <p>Day Streak</p>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2 class="section-title">
+                <span>⚡</span>
+                Quick Actions
+            </h2>
+            <div class="actions-grid">
+                <button class="action-btn">
+                    <span class="action-icon">📝</span>
+                    <span>Take Quiz</span>
+                </button>
+                <button class="action-btn">
+                    <span class="action-icon">🎮</span>
+                    <span>Play Game</span>
+                </button>
+                <button class="action-btn">
+                    <span class="action-icon">📊</span>
+                    <span>View Progress</span>
+                </button>
+                <button class="action-btn">
+                    <span class="action-icon">🎯</span>
+                    <span>Daily Challenge</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Learning Paths -->
+        <section>
+            <h2 class="section-title">
+                <span>🚀</span>
+                Your Learning Paths
+            </h2>
+            <div class="learning-grid">
+                <!-- Math Card -->
+                <div class="learning-card">
+                    <div class="learning-card-header math">
+                        <div class="card-icon">🔢</div>
+                        <h3>Mathematics</h3>
+                        <p>Numbers & Logic</p>
+                    </div>
+                    <div class="learning-card-body">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <div class="progress-text">65% Complete</div>
+                        <p>Master arithmetic, geometry, and problem-solving through fun challenges!</p>
+                        <button class="start-btn">Continue Learning</button>
+                    </div>
+                </div>
+
+                <!-- Science Card -->
+                <div class="learning-card">
+                    <div class="learning-card-header science">
+                        <div class="card-icon">🔬</div>
+                        <h3>Science</h3>
+                        <p>Explore & Discover</p>
+                    </div>
+                    <div class="learning-card-body">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%;"></div>
+                        </div>
+                        <div class="progress-text">45% Complete</div>
+                        <p>Discover the wonders of physics, chemistry, and biology through experiments!</p>
+                        <button class="start-btn">Continue Learning</button>
+                    </div>
+                </div>
+
+                <!-- Language Card -->
+                <div class="learning-card">
+                    <div class="learning-card-header language">
+                        <div class="card-icon">📖</div>
+                        <h3>Language Arts</h3>
+                        <p>Read & Write</p>
+                    </div>
+                    <div class="learning-card-body">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                        <div class="progress-text">80% Complete</div>
+                        <p>Enhance your reading, writing, and storytelling skills with creative activities!</p>
+                        <button class="start-btn">Continue Learning</button>
+                    </div>
+                </div>
+
+                <!-- Art Card -->
+                <div class="learning-card">
+                    <div class="learning-card-header art">
+                        <div class="card-icon">🎨</div>
+                        <h3>Creative Arts</h3>
+                        <p>Create & Express</p>
+                    </div>
+                    <div class="learning-card-body">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;"></div>
+                        </div>
+                        <div class="progress-text">30% Complete</div>
+                        <p>Express yourself through drawing, painting, and digital art projects!</p>
+                        <button class="start-btn">Continue Learning</button>
+                    </div>
+                </div>
+
+                <!-- Coding Card -->
+                <div class="learning-card">
+                    <div class="learning-card-header coding">
+                        <div class="card-icon">💻</div>
+                        <h3>Coding</h3>
+                        <p>Build & Create</p>
+                    </div>
+                    <div class="learning-card-body">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%;"></div>
+                        </div>
+                        <div class="progress-text">20% Complete</div>
+                        <p>Learn programming basics through interactive coding games and projects!</p>
+                        <button class="start-btn">Continue Learning</button>
+                    </div>
+                </div>
+
+                <!-- Music Card -->
+                <div class="learning-card">
+                    <div class="learning-card-header music">
+                        <div class="card-icon">🎵</div>
+                        <h3>Music</h3>
+                        <p>Listen & Play</p>
+                    </div>
+                    <div class="learning-card-body">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 55%;"></div>
+                        </div>
+                        <div class="progress-text">55% Complete</div>
+                        <p>Discover music theory and create your own melodies with fun instruments!</p>
+                        <button class="start-btn">Continue Learning</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="achievements">
+            <h2 class="section-title">
+                <span>🏅</span>
+                Your Achievements
+            </h2>
+            <div class="badges-grid">
+                <div class="badge">
+                    <div class="badge-icon">🌟</div>
+                    <div class="badge-name">First Steps</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">📚</div>
+                    <div class="badge-name">Book Worm</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🧮</div>
+                    <div class="badge-name">Math Wizard</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🔬</div>
+                    <div class="badge-name">Science Star</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🎯</div>
+                    <div class="badge-name">Perfect Score</div>
+                </div>
+                <div class="badge locked">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-name">Champion</div>
+                </div>
+                <div class="badge locked">
+                    <div class="badge-icon">💎</div>
+                    <div class="badge-name">Diamond</div>
+                </div>
+                <div class="badge locked">
+                    <div class="badge-icon">👑</div>
+                    <div class="badge-name">Master</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Playful Mind Academy. All rights reserved.</p>
+        <p>Keep learning, keep growing! 🌱</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="home.js"></script>
+</body>
+</html>
