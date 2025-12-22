@@ -42,9 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            const cardTitle = btn.closest('.learning-card').querySelector('h3').textContent;
-            // In a real app, this would navigate to the learning module
-            alert(`Starting ${cardTitle} learning path...`);
+            const card = btn.closest('.learning-card');
+            const cardTitle = card ? card.querySelector('h3') : null;
+            if (cardTitle) {
+                // In a real app, this would navigate to the learning module
+                alert(`Starting ${cardTitle.textContent} learning path...`);
+            }
         });
     });
 });
