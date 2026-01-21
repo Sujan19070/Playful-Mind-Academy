@@ -1,0 +1,112 @@
+:root {
+    --bg: #fffdf6;
+    --primary: #6cc48a;
+    --accent: #ffd27a;
+    --card: #ffe6c9;
+    --text: #2d2d2d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+}
+
+.lr-hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lr-hero h1 {
+    font-size: 2.5rem;
+    color: #3a7b5a;
+}
+
+.lr-hero p {
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+.lr-filter {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lr-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    background: var(--accent);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lr-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.lr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.lr-card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.lr-card:hover { transform: translateY(-4px); }
+
+.lr-badge {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.lr-badge.bronze { background: #c08b5c; }
+.lr-badge.silver { background: #9da6b1; }
+.lr-badge.gold { background: #f0b23d; }
+.lr-badge.platinum { background: #6fa8dc; }
+
+.lr-category {
+    font-weight: bold;
+    margin-top: 6px;
+    color: #5a5a5a;
+}
+
+.lr-points {
+    margin-top: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.lr-open {
+    margin-top: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}

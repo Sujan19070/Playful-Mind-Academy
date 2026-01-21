@@ -1,0 +1,147 @@
+:root {
+    --bg: #fffdf6;
+    --primary: #6cc48a;
+    --accent: #ffd27a;
+    --card: #ffe6c9;
+    --text: #2d2d2d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+}
+
+.pt-hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pt-hero h1 {
+    font-size: 2.5rem;
+    color: #3a7b5a;
+}
+
+.pt-hero p {
+    margin-top: 6px;
+    font-size: 1.1rem;
+}
+
+.pt-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.pt-card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.pt-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #3a7b5a;
+}
+
+.pt-section {
+    margin-bottom: 35px;
+}
+
+.pt-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: #3a7b5a;
+}
+
+.pt-skill {
+    margin-bottom: 14px;
+}
+
+.pt-skill-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.pt-bar {
+    background: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 14px;
+    margin-top: 6px;
+}
+
+.pt-bar-fill {
+    height: 100%;
+    background: var(--primary);
+}
+
+.pt-weekly {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    height: 160px;
+    padding: 10px;
+    background: #fff3df;
+    border-radius: 16px;
+}
+
+.pt-day {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pt-day-bar {
+    width: 100%;
+    background: var(--accent);
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 6px;
+}
+
+.pt-activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.pt-activity-card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.pt-meta {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #5a5a5a;
+}
+
+.pt-points {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.pt-status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+}
+
+.pt-status.completed { background: #6cc48a; }
+.pt-status.in-progress { background: #f0b23d; }

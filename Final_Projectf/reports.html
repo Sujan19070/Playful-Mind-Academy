@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Playful Academy</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a href="manager.html" class="back-btn">← Back</a>
+                <div class="logo">
+                    <div class="logo-icon">🎒</div>
+                    <span class="logo-text"><strong>Playful Academy</strong> Manager Console</span>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-header">
+            <div class="page-icon reports-icon">
+                <div class="report-bar green"></div>
+            </div>
+            <div class="page-title-section">
+                <h1 class="page-title">Reports</h1>
+                <p class="page-subtitle">Download cohort summaries</p>
+            </div>
+            <button class="create-btn">+ Generate Report</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <!-- Quick Stats -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <span class="stat-number">156</span>
+                    <span class="stat-label">Total Students</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Active Cohorts</span>
+                </div>
+                <div class="stat-card success">
+                    <span class="stat-number">78%</span>
+                    <span class="stat-label">Avg Completion</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24</span>
+                    <span class="stat-label">Reports Generated</span>
+                </div>
+            </div>
+
+            <!-- Report Types -->
+            <div class="report-types">
+                <h2>Quick Reports</h2>
+                <div class="report-cards">
+                    <div class="report-card">
+                        <div class="report-card-icon">📊</div>
+                        <h3>Progress Summary</h3>
+                        <p>Overall progress metrics for all cohorts</p>
+                        <button class="report-download-btn">Generate</button>
+                    </div>
+                    <div class="report-card">
+                        <div class="report-card-icon">📈</div>
+                        <h3>Performance Report</h3>
+                        <p>Detailed performance analysis by subject</p>
+                        <button class="report-download-btn">Generate</button>
+                    </div>
+                    <div class="report-card">
+                        <div class="report-card-icon">👥</div>
+                        <h3>Attendance Report</h3>
+                        <p>Student attendance and engagement data</p>
+                        <button class="report-download-btn">Generate</button>
+                    </div>
+                    <div class="report-card">
+                        <div class="report-card-icon">⏰</div>
+                        <h3>Screen Time Report</h3>
+                        <p>Device usage and screen time analytics</p>
+                        <button class="report-download-btn">Generate</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Report Builder -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Custom Report Builder</h2>
+                </div>
+                <div class="report-builder">
+                    <div class="builder-row">
+                        <div class="builder-group">
+                            <label>Report Type</label>
+                            <select class="form-select">
+                                <option>Select Report Type</option>
+                                <option>Progress Summary</option>
+                                <option>Performance Analysis</option>
+                                <option>Attendance Report</option>
+                                <option>Assignment Completion</option>
+                                <option>Screen Time Analysis</option>
+                                <option>Policy Compliance</option>
+                            </select>
+                        </div>
+                        <div class="builder-group">
+                            <label>Cohort</label>
+                            <select class="form-select">
+                                <option>All Cohorts</option>
+                                <option>Grade 6 - Section A</option>
+                                <option>Grade 6 - Section B</option>
+                                <option>Grade 7 - Section A</option>
+                                <option>Grade 7 - Section B</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="builder-row">
+                        <div class="builder-group">
+                            <label>Date Range</label>
+                            <div class="date-range-inputs">
+                                <input type="date" class="form-input">
+                                <span>to</span>
+                                <input type="date" class="form-input">
+                            </div>
+                        </div>
+                        <div class="builder-group">
+                            <label>Format</label>
+                            <div class="format-options">
+                                <label class="format-option">
+                                    <input type="radio" name="format" checked>
+                                    <span>PDF</span>
+                                </label>
+                                <label class="format-option">
+                                    <input type="radio" name="format">
+                                    <span>Excel</span>
+                                </label>
+                                <label class="format-option">
+                                    <input type="radio" name="format">
+                                    <span>CSV</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="builder-row">
+                        <div class="builder-group full-width">
+                            <label>Include Sections</label>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" checked> Summary Overview
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" checked> Progress Charts
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" checked> Student Details
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox"> Individual Scores
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox"> Attendance Data
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox"> Screen Time Data
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="builder-actions">
+                        <button class="btn-secondary">Preview</button>
+                        <button class="btn-primary">Generate Report</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Reports -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Recent Reports</h2>
+                    <a href="#" class="view-all-link">View All →</a>
+                </div>
+                <div class="reports-list">
+                    <!-- Report Item 1 -->
+                    <div class="report-item">
+                        <div class="report-icon pdf">📄</div>
+                        <div class="report-info">
+                            <h4>Weekly Progress Summary - All Cohorts</h4>
+                            <p>Generated on January 17, 2026 at 2:30 PM</p>
+                            <div class="report-meta">
+                                <span class="meta-item">📊 Progress Summary</span>
+                                <span class="meta-item">📅 Jan 10 - Jan 17, 2026</span>
+                                <span class="meta-item">📁 2.4 MB</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <button class="action-btn download">⬇ Download</button>
+                            <button class="action-btn view">👁 View</button>
+                            <button class="action-btn share">📤 Share</button>
+                        </div>
+                    </div>
+
+                    <!-- Report Item 2 -->
+                    <div class="report-item">
+                        <div class="report-icon excel">📊</div>
+                        <div class="report-info">
+                            <h4>Grade 6 Performance Analysis</h4>
+                            <p>Generated on January 15, 2026 at 10:15 AM</p>
+                            <div class="report-meta">
+                                <span class="meta-item">📈 Performance Report</span>
+                                <span class="meta-item">📅 December 2025</span>
+                                <span class="meta-item">📁 1.8 MB</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <button class="action-btn download">⬇ Download</button>
+                            <button class="action-btn view">👁 View</button>
+                            <button class="action-btn share">📤 Share</button>
+                        </div>
+                    </div>
+
+                    <!-- Report Item 3 -->
+                    <div class="report-item">
+                        <div class="report-icon pdf">📄</div>
+                        <div class="report-info">
+                            <h4>Screen Time Report - Grade 7 Section B</h4>
+                            <p>Generated on January 14, 2026 at 4:45 PM</p>
+                            <div class="report-meta">
+                                <span class="meta-item">⏰ Screen Time</span>
+                                <span class="meta-item">📅 Jan 1 - Jan 14, 2026</span>
+                                <span class="meta-item">📁 1.2 MB</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <button class="action-btn download">⬇ Download</button>
+                            <button class="action-btn view">👁 View</button>
+                            <button class="action-btn share">📤 Share</button>
+                        </div>
+                    </div>
+
+                    <!-- Report Item 4 -->
+                    <div class="report-item">
+                        <div class="report-icon csv">📋</div>
+                        <div class="report-info">
+                            <h4>Assignment Completion Data Export</h4>
+                            <p>Generated on January 12, 2026 at 9:00 AM</p>
+                            <div class="report-meta">
+                                <span class="meta-item">📝 Assignment Report</span>
+                                <span class="meta-item">📅 Q4 2025</span>
+                                <span class="meta-item">📁 856 KB</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <button class="action-btn download">⬇ Download</button>
+                            <button class="action-btn view">👁 View</button>
+                            <button class="action-btn share">📤 Share</button>
+                        </div>
+                    </div>
+
+                    <!-- Report Item 5 -->
+                    <div class="report-item">
+                        <div class="report-icon pdf">📄</div>
+                        <div class="report-info">
+                            <h4>Monthly Attendance Summary</h4>
+                            <p>Generated on January 10, 2026 at 11:30 AM</p>
+                            <div class="report-meta">
+                                <span class="meta-item">👥 Attendance</span>
+                                <span class="meta-item">📅 December 2025</span>
+                                <span class="meta-item">📁 3.1 MB</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <button class="action-btn download">⬇ Download</button>
+                            <button class="action-btn view">👁 View</button>
+                            <button class="action-btn share">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scheduled Reports -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Scheduled Reports</h2>
+                    <button class="btn-small">+ Add Schedule</button>
+                </div>
+                <div class="scheduled-list">
+                    <div class="scheduled-item">
+                        <div class="schedule-info">
+                            <h4>Weekly Progress Summary</h4>
+                            <p>Automatically generated every Friday at 5:00 PM</p>
+                        </div>
+                        <div class="schedule-details">
+                            <span class="schedule-frequency">Weekly</span>
+                            <span class="schedule-next">Next: Jan 24, 2026</span>
+                        </div>
+                        <div class="schedule-toggle">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <button class="action-btn edit">Edit</button>
+                    </div>
+                    <div class="scheduled-item">
+                        <div class="schedule-info">
+                            <h4>Monthly Performance Report</h4>
+                            <p>Automatically generated on the 1st of each month</p>
+                        </div>
+                        <div class="schedule-details">
+                            <span class="schedule-frequency">Monthly</span>
+                            <span class="schedule-next">Next: Feb 1, 2026</span>
+                        </div>
+                        <div class="schedule-toggle">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <button class="action-btn edit">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Generate Report Modal -->
+    <div class="modal-overlay" id="createModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Generate Report</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="generating-animation">
+                    <div class="spinner"></div>
+                    <p>Generating your report...</p>
+                    <p class="generating-status">Processing cohort data...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+</body>
+</html>

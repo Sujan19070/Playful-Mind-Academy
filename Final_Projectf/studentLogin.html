@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Login</title>
+
+<style>
+body{
+    background:#e3f2fd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+.box{
+    background:white;
+    padding:30px;
+    width:320px;
+    border-radius:10px;
+}
+input,button{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+}
+.actions{
+    display:flex;
+    gap:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Student Login</h2>
+
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <div class="actions">
+        <button onclick="login()">Login</button>
+        <button onclick="location.href='studentRegister.html'">
+            Register
+        </button>
+    </div>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+function login(){
+    let e = document.getElementById("email").value;
+    let p = document.getElementById("password").value;
+
+    fetch("studentLogin.php",{
+        method:"POST",
+        headers:{"Content-Type":"application/x-www-form-urlencoded"},
+        body:"email="+e+"&password="+p
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("msg").innerText = data.message;
+
+        if(data.status === "success"){
+            // 🔴 CHANGE IS HERE
+            window.location.href = "index.php";
+        }
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #fdfbf7;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background: #eef8dc;
+}
+
+.topbar span {
+    font-size: 14px;
+    color: #666;
+}
+
+.back-btn, .subscribe-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.back-btn { background: #ffd9b3; }
+.subscribe-btn { background: #9be2b1; }
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #ffe9d4;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.admin-badge {
+    background: #f3a35c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main */
+.main {
+    background: #fffaf3;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #e8f5e9;
+    cursor: pointer;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.open-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #9be2b1;
+    background: #ecfff2;
+    cursor: pointer;
+}
+
+.open-btn:hover {
+    background: #c9f1d7;
+}
+
+/* Status */
+.status {
+    background: #e9f9ea;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.ok { color: green; font-weight: bold; }
+.warn {
+    background: #ffe0a3;
+    padding: 6px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}

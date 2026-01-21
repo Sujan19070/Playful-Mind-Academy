@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playful Academy - Manager Console</title>
+    <link rel="stylesheet" href="managerstyle.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button class="back-btn">Back</button>
+                <div class="logo">
+                    <div class="logo-icon">🎒</div>
+                    <span class="logo-text"><strong>Playful Academy</strong> Manager Console</span>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="profile-card">
+                    <div class="manager-badge">MANAGER</div>
+                    <div class="profile-avatar"></div>
+                    <div class="profile-links">
+                        <a href="#" class="profile-link">Cohorts</a>
+                        <a href="#" class="profile-link">Assignments</a>
+                        <a href="#" class="profile-link">Policies</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Content -->
+            <section class="center-content">
+                <!-- Navigation Tabs -->
+                <nav class="nav-tabs">
+                    <button class="nav-tab active" data-tab="cohorts">Cohorts</button>
+                    <button class="nav-tab" data-tab="assignments">Assignments</button>
+                    <button class="nav-tab" data-tab="progress">Cohort Progress</button>
+                    <button class="nav-tab" data-tab="policies">Cohort Policies</button>
+                </nav>
+
+                <!-- Cards Grid -->
+                <div class="cards-grid">
+                    <!-- Row 1 -->
+                    <div class="card" data-link="cohorts.html">
+                        <h3 class="card-title">Cohorts</h3>
+                        <p class="card-description">Create and manage groups/classes</p>
+                        <div class="card-visual cohorts-visual">
+                            <div class="circle yellow"></div>
+                            <div class="circle blue"></div>
+                        </div>
+                        <a href="cohorts.html" class="open-btn">Open</a>
+                    </div>
+
+                    <div class="card" data-link="assignments.html">
+                        <h3 class="card-title">Assignments</h3>
+                        <p class="card-description">Resources & goals to cohorts</p>
+                        <div class="card-visual assignments-visual">
+                            <div class="bar yellow"></div>
+                        </div>
+                        <a href="assignments.html" class="open-btn">Open</a>
+                    </div>
+
+                    <div class="card" data-link="progress.html">
+                        <h3 class="card-title">Cohort Progress</h3>
+                        <p class="card-description">Aggregated metrics & trends</p>
+                        <div class="card-visual progress-visual">
+                            <div class="progress-bars">
+                                <div class="progress-bar" style="height: 40%"></div>
+                                <div class="progress-bar" style="height: 60%"></div>
+                                <div class="progress-bar" style="height: 45%"></div>
+                                <div class="progress-bar" style="height: 80%"></div>
+                                <div class="progress-bar" style="height: 55%"></div>
+                                <div class="progress-bar" style="height: 70%"></div>
+                                <div class="progress-bar" style="height: 50%"></div>
+                                <div class="progress-bar" style="height: 65%"></div>
+                            </div>
+                        </div>
+                        <a href="progress.html" class="open-btn">Open</a>
+                    </div>
+
+                    <div class="card" data-link="policies.html">
+                        <h3 class="card-title">Cohort Policies</h3>
+                        <p class="card-description">Screen/content within limits</p>
+                        <div class="card-visual policies-visual">
+                            <div class="checkmarks">
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                                <span class="checkmark">✓</span>
+                            </div>
+                        </div>
+                        <a href="policies.html" class="open-btn">Open</a>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="card" data-link="schedule.html">
+                        <h3 class="card-title">Schedule</h3>
+                        <p class="card-description">Events & Thursday planner</p>
+                        <div class="card-visual schedule-visual">
+                            <div class="schedule-bar"></div>
+                        </div>
+                        <a href="schedule.html" class="open-btn">Open</a>
+                    </div>
+
+                    <div class="card" data-link="help.html">
+                        <h3 class="card-title">Help & Escalations</h3>
+                        <p class="card-description">Support tickets and FAQs</p>
+                        <div class="card-visual help-visual">
+                            <div class="circle green"></div>
+                            <div class="circle light-blue"></div>
+                        </div>
+                        <a href="help.html" class="open-btn">Open</a>
+                    </div>
+
+                    <div class="card" data-link="approvals.html">
+                        <h3 class="card-title">Approvals</h3>
+                        <p class="card-description">Requests from parents/students</p>
+                        <div class="card-visual approvals-visual">
+                            <div class="approval-bars">
+                                <div class="approval-bar blue"></div>
+                                <div class="approval-bar yellow"></div>
+                            </div>
+                        </div>
+                        <a href="approvals.html" class="open-btn">Open</a>
+                    </div>
+
+                    <div class="card" data-link="reports.html">
+                        <h3 class="card-title">Reports</h3>
+                        <p class="card-description">Download cohort summaries</p>
+                        <div class="card-visual reports-visual">
+                            <div class="report-bar"></div>
+                        </div>
+                        <a href="reports.html" class="open-btn">Open</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Sidebar -->
+            <aside class="right-sidebar">
+                <div class="stats-card">
+                    <div class="cohorts-badge">COHORTS</div>
+                    <div class="stat-item">
+                        <span class="stat-label">Active:</span>
+                        <span class="stat-value">4</span>
+                    </div>
+                    <div class="stat-item on-track">
+                        <span class="stat-label">On track:</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                    <div class="stat-item needs-attention">
+                        <span class="stat-label">Needs attention:</span>
+                        <span class="stat-value">1</span>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="managerscript.js"></script>
+</body>
+</html>

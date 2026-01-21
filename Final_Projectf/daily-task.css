@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #aee1ff, #fef6d1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app {
+    background: #fff7e6;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 0.5rem;
+    color: #ff7b00;
+}
+
+.subtitle {
+    margin: 0 0 1.5rem;
+    color: #444;
+}
+
+form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    flex: 1;
+    padding: 0.7rem;
+    border: 2px solid #ffd27f;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+button {
+    background: #ff9f1c;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff7b00;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    margin: 0.5rem 0;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    border: 2px dashed #ffd27f;
+}
+
+li.done {
+    background: #d4f8d4;
+    text-decoration: line-through;
+    color: #2d6a2d;
+}
+
+.stats {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}

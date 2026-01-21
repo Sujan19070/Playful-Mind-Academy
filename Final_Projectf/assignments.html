@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - Playful Academy</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a href="manager.html" class="back-btn">← Back</a>
+                <div class="logo">
+                    <div class="logo-icon">🎒</div>
+                    <span class="logo-text"><strong>Playful Academy</strong> Manager Console</span>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-header">
+            <div class="page-icon assignments-icon">
+                <div class="bar yellow"></div>
+            </div>
+            <div class="page-title-section">
+                <h1 class="page-title">Assignments</h1>
+                <p class="page-subtitle">Resources & goals to cohorts</p>
+            </div>
+            <button class="create-btn">+ Create Assignment</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <span class="stat-number">24</span>
+                    <span class="stat-label">Total Assignments</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">18</span>
+                    <span class="stat-label">Active</span>
+                </div>
+                <div class="stat-card success">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+                <div class="stat-card warning">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Overdue</span>
+                </div>
+            </div>
+
+            <!-- Assignments Tabs -->
+            <div class="content-tabs">
+                <button class="content-tab active" data-tab="all">All Assignments</button>
+                <button class="content-tab" data-tab="active">Active</button>
+                <button class="content-tab" data-tab="completed">Completed</button>
+                <button class="content-tab" data-tab="draft">Drafts</button>
+            </div>
+
+            <!-- Assignments List -->
+            <div class="content-section">
+                <div class="section-header">
+                    <div class="search-filter">
+                        <input type="text" placeholder="Search assignments..." class="search-input">
+                        <select class="filter-select">
+                            <option>All Cohorts</option>
+                            <option>Grade 6 - Section A</option>
+                            <option>Grade 6 - Section B</option>
+                            <option>Grade 7 - Section A</option>
+                            <option>Grade 7 - Section B</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Types</option>
+                            <option>Quiz</option>
+                            <option>Project</option>
+                            <option>Reading</option>
+                            <option>Video</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="assignments-list">
+                    <!-- Assignment Item 1 -->
+                    <div class="assignment-item">
+                        <div class="assignment-type quiz">
+                            <span>📝</span>
+                        </div>
+                        <div class="assignment-info">
+                            <h3>Math Quiz - Chapter 5</h3>
+                            <p>Algebra fundamentals assessment</p>
+                            <div class="assignment-meta">
+                                <span class="meta-item">📚 Grade 6 - Section A</span>
+                                <span class="meta-item">📅 Due: Jan 20, 2026</span>
+                            </div>
+                        </div>
+                        <div class="assignment-stats">
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">38/42</span>
+                                <span class="stat-mini-label">Submitted</span>
+                            </div>
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">85%</span>
+                                <span class="stat-mini-label">Avg Score</span>
+                            </div>
+                        </div>
+                        <div class="assignment-status active">Active</div>
+                        <div class="assignment-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Assignment Item 2 -->
+                    <div class="assignment-item">
+                        <div class="assignment-type project">
+                            <span>🎨</span>
+                        </div>
+                        <div class="assignment-info">
+                            <h3>Science Project - Solar System</h3>
+                            <p>Create a model of the solar system</p>
+                            <div class="assignment-meta">
+                                <span class="meta-item">📚 Grade 6 - Section B</span>
+                                <span class="meta-item">📅 Due: Jan 25, 2026</span>
+                            </div>
+                        </div>
+                        <div class="assignment-stats">
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">22/38</span>
+                                <span class="stat-mini-label">Submitted</span>
+                            </div>
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">--</span>
+                                <span class="stat-mini-label">Avg Score</span>
+                            </div>
+                        </div>
+                        <div class="assignment-status active">Active</div>
+                        <div class="assignment-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Assignment Item 3 -->
+                    <div class="assignment-item">
+                        <div class="assignment-type reading">
+                            <span>📖</span>
+                        </div>
+                        <div class="assignment-info">
+                            <h3>English Reading - Chapter 8</h3>
+                            <p>Read and summarize the chapter</p>
+                            <div class="assignment-meta">
+                                <span class="meta-item">📚 Grade 7 - Section A</span>
+                                <span class="meta-item">📅 Due: Jan 18, 2026</span>
+                            </div>
+                        </div>
+                        <div class="assignment-stats">
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">40/40</span>
+                                <span class="stat-mini-label">Submitted</span>
+                            </div>
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">92%</span>
+                                <span class="stat-mini-label">Avg Score</span>
+                            </div>
+                        </div>
+                        <div class="assignment-status completed">Completed</div>
+                        <div class="assignment-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Assignment Item 4 -->
+                    <div class="assignment-item">
+                        <div class="assignment-type video">
+                            <span>🎬</span>
+                        </div>
+                        <div class="assignment-info">
+                            <h3>History Documentary Review</h3>
+                            <p>Watch and write a review</p>
+                            <div class="assignment-meta">
+                                <span class="meta-item">📚 Grade 7 - Section B</span>
+                                <span class="meta-item">📅 Due: Jan 15, 2026</span>
+                            </div>
+                        </div>
+                        <div class="assignment-stats">
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">20/36</span>
+                                <span class="stat-mini-label">Submitted</span>
+                            </div>
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">78%</span>
+                                <span class="stat-mini-label">Avg Score</span>
+                            </div>
+                        </div>
+                        <div class="assignment-status overdue">Overdue</div>
+                        <div class="assignment-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Assignment Item 5 -->
+                    <div class="assignment-item">
+                        <div class="assignment-type quiz">
+                            <span>📝</span>
+                        </div>
+                        <div class="assignment-info">
+                            <h3>Geography Quiz - World Capitals</h3>
+                            <p>Test knowledge of world capitals</p>
+                            <div class="assignment-meta">
+                                <span class="meta-item">📚 All Cohorts</span>
+                                <span class="meta-item">📅 Due: Jan 22, 2026</span>
+                            </div>
+                        </div>
+                        <div class="assignment-stats">
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">0/156</span>
+                                <span class="stat-mini-label">Submitted</span>
+                            </div>
+                            <div class="stat-mini">
+                                <span class="stat-mini-value">--</span>
+                                <span class="stat-mini-label">Avg Score</span>
+                            </div>
+                        </div>
+                        <div class="assignment-status draft">Draft</div>
+                        <div class="assignment-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Create Assignment Modal -->
+    <div class="modal-overlay" id="createModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Create New Assignment</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Assignment Title</label>
+                    <input type="text" placeholder="Enter assignment title" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Enter assignment description..." class="form-textarea"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Assignment Type</label>
+                        <select class="form-select">
+                            <option>Select Type</option>
+                            <option>Quiz</option>
+                            <option>Project</option>
+                            <option>Reading</option>
+                            <option>Video</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Due Date</label>
+                        <input type="date" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Assign to Cohorts</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 6 - Section A
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 6 - Section B
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 7 - Section A
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 7 - Section B
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn-outline">Save as Draft</button>
+                <button class="btn-primary">Create & Publish</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+</body>
+</html>

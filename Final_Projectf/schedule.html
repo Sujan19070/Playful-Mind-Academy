@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Playful Academy</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a href="manager.html" class="back-btn">← Back</a>
+                <div class="logo">
+                    <div class="logo-icon">🎒</div>
+                    <span class="logo-text"><strong>Playful Academy</strong> Manager Console</span>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-header">
+            <div class="page-icon schedule-icon">
+                <div class="calendar-mini">📅</div>
+            </div>
+            <div class="page-title-section">
+                <h1 class="page-title">Schedule</h1>
+                <p class="page-subtitle">Events & Thursday planner</p>
+            </div>
+            <button class="create-btn">+ Add Event</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <!-- Calendar Navigation -->
+            <div class="calendar-nav">
+                <button class="nav-arrow">←</button>
+                <h2 class="current-month">January 2026</h2>
+                <button class="nav-arrow">→</button>
+                <div class="view-toggle">
+                    <button class="view-btn active">Week</button>
+                    <button class="view-btn">Month</button>
+                    <button class="view-btn">Day</button>
+                </div>
+            </div>
+
+            <!-- Calendar Grid -->
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="calendar-day-header">Sun</div>
+                    <div class="calendar-day-header">Mon</div>
+                    <div class="calendar-day-header">Tue</div>
+                    <div class="calendar-day-header">Wed</div>
+                    <div class="calendar-day-header highlight">Thu</div>
+                    <div class="calendar-day-header">Fri</div>
+                    <div class="calendar-day-header">Sat</div>
+                </div>
+                <div class="calendar-body">
+                    <!-- Week Row -->
+                    <div class="calendar-week">
+                        <div class="calendar-day weekend">
+                            <span class="day-number">12</span>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-number">13</span>
+                            <div class="day-event blue">Staff Meeting</div>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-number">14</span>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-number">15</span>
+                            <div class="day-event green">Science Fair</div>
+                        </div>
+                        <div class="calendar-day thursday">
+                            <span class="day-number">16</span>
+                            <div class="day-event yellow">Thursday Planner</div>
+                            <div class="day-event purple">Parent Meeting</div>
+                        </div>
+                        <div class="calendar-day today">
+                            <span class="day-number">17</span>
+                            <div class="day-event orange">Quiz Day</div>
+                        </div>
+                        <div class="calendar-day weekend">
+                            <span class="day-number">18</span>
+                        </div>
+                    </div>
+                    <!-- Week Row 2 -->
+                    <div class="calendar-week">
+                        <div class="calendar-day weekend">
+                            <span class="day-number">19</span>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-number">20</span>
+                            <div class="day-event blue">Assignment Due</div>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-number">21</span>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-number">22</span>
+                            <div class="day-event green">Field Trip</div>
+                        </div>
+                        <div class="calendar-day thursday">
+                            <span class="day-number">23</span>
+                            <div class="day-event yellow">Thursday Planner</div>
+                        </div>
+                        <div class="calendar-day">
+                            <span class="day-number">24</span>
+                        </div>
+                        <div class="calendar-day weekend">
+                            <span class="day-number">25</span>
+                            <div class="day-event red">Project Due</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Events & Thursday Planner -->
+            <div class="schedule-grid">
+                <!-- Upcoming Events -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <h2>Upcoming Events</h2>
+                        <a href="#" class="view-all-link">View All →</a>
+                    </div>
+                    <div class="events-list">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">17</span>
+                                <span class="event-month">Jan</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Quiz Day - Mathematics</h4>
+                                <p>Chapter 5 assessment for all Grade 6 students</p>
+                                <div class="event-meta">
+                                    <span>📍 All Classrooms</span>
+                                    <span>⏰ 9:00 AM - 10:30 AM</span>
+                                </div>
+                            </div>
+                            <div class="event-cohorts">
+                                <span class="cohort-tag">6A</span>
+                                <span class="cohort-tag">6B</span>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">22</span>
+                                <span class="event-month">Jan</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Field Trip - Science Museum</h4>
+                                <p>Educational visit to the Natural Science Museum</p>
+                                <div class="event-meta">
+                                    <span>📍 Science Museum</span>
+                                    <span>⏰ 8:00 AM - 3:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="event-cohorts">
+                                <span class="cohort-tag">7A</span>
+                                <span class="cohort-tag">7B</span>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="event-day">25</span>
+                                <span class="event-month">Jan</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Science Project Submission</h4>
+                                <p>Solar System model project deadline</p>
+                                <div class="event-meta">
+                                    <span>📍 Science Lab</span>
+                                    <span>⏰ By 5:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="event-cohorts">
+                                <span class="cohort-tag">6B</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thursday Planner -->
+                <div class="content-section thursday-planner">
+                    <div class="section-header">
+                        <h2>🗓️ Thursday Planner</h2>
+                        <span class="planner-date">January 16, 2026</span>
+                    </div>
+                    <div class="planner-content">
+                        <p class="planner-description">Thursday is our special planning day! Review progress and set goals for the week ahead.</p>
+                        
+                        <div class="planner-checklist">
+                            <h4>Weekly Review Checklist</h4>
+                            <label class="checklist-item">
+                                <input type="checkbox" checked>
+                                <span>Review cohort progress reports</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" checked>
+                                <span>Check assignment completion rates</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>Address policy violations</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>Plan next week's activities</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>Send parent updates</span>
+                            </label>
+                        </div>
+
+                        <div class="planner-meetings">
+                            <h4>Scheduled Meetings</h4>
+                            <div class="meeting-item">
+                                <span class="meeting-time">10:00 AM</span>
+                                <span class="meeting-title">Grade 6 Teachers Sync</span>
+                            </div>
+                            <div class="meeting-item">
+                                <span class="meeting-time">2:00 PM</span>
+                                <span class="meeting-title">Parent-Teacher Conference</span>
+                            </div>
+                            <div class="meeting-item">
+                                <span class="meeting-time">4:00 PM</span>
+                                <span class="meeting-title">Weekly Planning Session</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Event Modal -->
+    <div class="modal-overlay" id="createModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Add New Event</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Event Title</label>
+                    <input type="text" placeholder="Enter event title" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Enter event description..." class="form-textarea"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" placeholder="Enter location" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Event Color</label>
+                    <div class="color-options">
+                        <button class="color-btn" style="background: #7ec8e3"></button>
+                        <button class="color-btn" style="background: #90c695"></button>
+                        <button class="color-btn" style="background: #f5d76e"></button>
+                        <button class="color-btn" style="background: #e67e22"></button>
+                        <button class="color-btn" style="background: #9b59b6"></button>
+                        <button class="color-btn" style="background: #e74c3c"></button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Invite Cohorts</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox"> All Cohorts
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 6 - Section A
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 6 - Section B
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 7 - Section A
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 7 - Section B
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn-primary">Add Event</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+</body>
+</html>
