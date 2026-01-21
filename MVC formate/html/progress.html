@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cohort Progress - Playful Academy</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a href="manager.html" class="back-btn">← Back</a>
+                <div class="logo">
+                    <div class="logo-icon">🎒</div>
+                    <span class="logo-text"><strong>Playful Academy</strong> Manager Console</span>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-header">
+            <div class="page-icon progress-icon">
+                <div class="mini-bars">
+                    <div class="mini-bar" style="height: 40%"></div>
+                    <div class="mini-bar" style="height: 70%"></div>
+                    <div class="mini-bar" style="height: 55%"></div>
+                    <div class="mini-bar" style="height: 85%"></div>
+                    <div class="mini-bar" style="height: 60%"></div>
+                </div>
+            </div>
+            <div class="page-title-section">
+                <h1 class="page-title">Cohort Progress</h1>
+                <p class="page-subtitle">Aggregated metrics & trends</p>
+            </div>
+            <button class="create-btn">📊 Export Report</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <!-- Time Filter -->
+            <div class="time-filter">
+                <button class="time-btn active">This Week</button>
+                <button class="time-btn">This Month</button>
+                <button class="time-btn">This Quarter</button>
+                <button class="time-btn">This Year</button>
+                <div class="date-range">
+                    <input type="date" class="date-input">
+                    <span>to</span>
+                    <input type="date" class="date-input">
+                </div>
+            </div>
+
+            <!-- Overview Cards -->
+            <div class="stats-overview">
+                <div class="stat-card large">
+                    <div class="stat-trend up">↑ 12%</div>
+                    <span class="stat-number">78%</span>
+                    <span class="stat-label">Overall Completion Rate</span>
+                </div>
+                <div class="stat-card large">
+                    <div class="stat-trend up">↑ 5%</div>
+                    <span class="stat-number">85%</span>
+                    <span class="stat-label">Average Score</span>
+                </div>
+                <div class="stat-card large">
+                    <div class="stat-trend down">↓ 3%</div>
+                    <span class="stat-number">4.2h</span>
+                    <span class="stat-label">Avg. Study Time/Day</span>
+                </div>
+                <div class="stat-card large">
+                    <div class="stat-trend up">↑ 8%</div>
+                    <span class="stat-number">92%</span>
+                    <span class="stat-label">Engagement Rate</span>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-grid">
+                <!-- Progress Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Weekly Progress</h3>
+                        <select class="chart-filter">
+                            <option>All Cohorts</option>
+                            <option>Grade 6 - Section A</option>
+                            <option>Grade 6 - Section B</option>
+                            <option>Grade 7 - Section A</option>
+                            <option>Grade 7 - Section B</option>
+                        </select>
+                    </div>
+                    <div class="chart-body">
+                        <div class="bar-chart">
+                            <div class="bar-item">
+                                <div class="bar-label">Mon</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="height: 65%"></div>
+                                </div>
+                                <div class="bar-value">65%</div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Tue</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="height: 78%"></div>
+                                </div>
+                                <div class="bar-value">78%</div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Wed</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="height: 82%"></div>
+                                </div>
+                                <div class="bar-value">82%</div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Thu</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="height: 70%"></div>
+                                </div>
+                                <div class="bar-value">70%</div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Fri</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="height: 88%"></div>
+                                </div>
+                                <div class="bar-value">88%</div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Sat</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="height: 45%"></div>
+                                </div>
+                                <div class="bar-value">45%</div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Sun</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="height: 30%"></div>
+                                </div>
+                                <div class="bar-value">30%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subject Performance -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Subject Performance</h3>
+                    </div>
+                    <div class="chart-body">
+                        <div class="subject-list">
+                            <div class="subject-item">
+                                <span class="subject-name">Mathematics</span>
+                                <div class="subject-bar-container">
+                                    <div class="subject-bar" style="width: 88%"></div>
+                                </div>
+                                <span class="subject-score">88%</span>
+                            </div>
+                            <div class="subject-item">
+                                <span class="subject-name">Science</span>
+                                <div class="subject-bar-container">
+                                    <div class="subject-bar" style="width: 82%"></div>
+                                </div>
+                                <span class="subject-score">82%</span>
+                            </div>
+                            <div class="subject-item">
+                                <span class="subject-name">English</span>
+                                <div class="subject-bar-container">
+                                    <div class="subject-bar" style="width: 91%"></div>
+                                </div>
+                                <span class="subject-score">91%</span>
+                            </div>
+                            <div class="subject-item">
+                                <span class="subject-name">History</span>
+                                <div class="subject-bar-container">
+                                    <div class="subject-bar" style="width: 75%"></div>
+                                </div>
+                                <span class="subject-score">75%</span>
+                            </div>
+                            <div class="subject-item">
+                                <span class="subject-name">Geography</span>
+                                <div class="subject-bar-container">
+                                    <div class="subject-bar" style="width: 79%"></div>
+                                </div>
+                                <span class="subject-score">79%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cohort Comparison -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Cohort Comparison</h2>
+                </div>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cohort</th>
+                                <th>Students</th>
+                                <th>Completion</th>
+                                <th>Avg Score</th>
+                                <th>Study Time</th>
+                                <th>Engagement</th>
+                                <th>Trend</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cohort-cell">
+                                        <div class="cohort-dot" style="background: #7ec8e3"></div>
+                                        Grade 6 - Section A
+                                    </div>
+                                </td>
+                                <td>42</td>
+                                <td>
+                                    <div class="progress-cell">
+                                        <div class="mini-progress">
+                                            <div class="mini-progress-fill" style="width: 78%"></div>
+                                        </div>
+                                        78%
+                                    </div>
+                                </td>
+                                <td>85%</td>
+                                <td>4.5h</td>
+                                <td>94%</td>
+                                <td class="trend-up">↑ 5%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cohort-cell">
+                                        <div class="cohort-dot" style="background: #f5d76e"></div>
+                                        Grade 6 - Section B
+                                    </div>
+                                </td>
+                                <td>38</td>
+                                <td>
+                                    <div class="progress-cell">
+                                        <div class="mini-progress">
+                                            <div class="mini-progress-fill" style="width: 82%"></div>
+                                        </div>
+                                        82%
+                                    </div>
+                                </td>
+                                <td>87%</td>
+                                <td>4.2h</td>
+                                <td>91%</td>
+                                <td class="trend-up">↑ 8%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cohort-cell">
+                                        <div class="cohort-dot" style="background: #90c695"></div>
+                                        Grade 7 - Section A
+                                    </div>
+                                </td>
+                                <td>40</td>
+                                <td>
+                                    <div class="progress-cell">
+                                        <div class="mini-progress">
+                                            <div class="mini-progress-fill" style="width: 91%"></div>
+                                        </div>
+                                        91%
+                                    </div>
+                                </td>
+                                <td>92%</td>
+                                <td>5.1h</td>
+                                <td>96%</td>
+                                <td class="trend-up">↑ 12%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cohort-cell">
+                                        <div class="cohort-dot" style="background: #e67e22"></div>
+                                        Grade 7 - Section B
+                                    </div>
+                                </td>
+                                <td>36</td>
+                                <td>
+                                    <div class="progress-cell">
+                                        <div class="mini-progress warning">
+                                            <div class="mini-progress-fill" style="width: 45%"></div>
+                                        </div>
+                                        45%
+                                    </div>
+                                </td>
+                                <td>72%</td>
+                                <td>2.8h</td>
+                                <td>68%</td>
+                                <td class="trend-down">↓ 15%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Top Performers -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Top Performers This Week</h2>
+                </div>
+                <div class="performers-grid">
+                    <div class="performer-card gold">
+                        <div class="performer-rank">🥇</div>
+                        <div class="performer-avatar">👨‍🎓</div>
+                        <div class="performer-name">Alex Johnson</div>
+                        <div class="performer-cohort">Grade 7 - Section A</div>
+                        <div class="performer-score">98%</div>
+                    </div>
+                    <div class="performer-card silver">
+                        <div class="performer-rank">🥈</div>
+                        <div class="performer-avatar">👩‍🎓</div>
+                        <div class="performer-name">Sarah Williams</div>
+                        <div class="performer-cohort">Grade 6 - Section B</div>
+                        <div class="performer-score">96%</div>
+                    </div>
+                    <div class="performer-card bronze">
+                        <div class="performer-rank">🥉</div>
+                        <div class="performer-avatar">👨‍🎓</div>
+                        <div class="performer-name">Michael Chen</div>
+                        <div class="performer-cohort">Grade 6 - Section A</div>
+                        <div class="performer-score">95%</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="pages.js"></script>
+</body>
+</html>

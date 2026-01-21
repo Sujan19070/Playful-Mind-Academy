@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audit Logs</title>
+</head>
+<body>
+
+<h2>Audit Logs</h2>
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Action (Edit)</th>
+            <th>IP</th>
+            <th>Date</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="logs"></tbody>
+</table>
+
+<script>
+// READ: database theke data ana
+fetch("auditLogs.php")
+.then(res => res.json())
+.then(data => {
+    let rows = "";
+
+    data.forEach(log => {
+        rows += `
+        <tr>
+            <td>${log.user_name}</td>
+            <td contenteditable="true"
+                onblur="updateLog(${log.id}, this.innerText)">
+                ${log.action}
+            </td>
+            <td>${log.ip_address}</td>
+            <td>${log.created_at}</td>
+            <td>
+                <button onclick="deleteLog(${log.id})">Delete</button>
+            </td>
+        </tr>
+        `;
+    });
+
+    document.getElementById("logs").innerHTML = rows;
+});
+
+// DELETE: database theke row delete
+function deleteLog(id) {
+    fetch("deleteLog.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "id=" + id
+    }).then(() => location.reload());
+}
+
+// UPDATE: action text edit kore database update
+function updateLog(id, action) {
+    fetch("updateLog.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "id=" + id + "&action=" + encodeURIComponent(action)
+    });
+}
+</script>
+
+</body>
+</html>

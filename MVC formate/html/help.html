@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Escalations - Playful Academy</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a href="manager.html" class="back-btn">← Back</a>
+                <div class="logo">
+                    <div class="logo-icon">🎒</div>
+                    <span class="logo-text"><strong>Playful Academy</strong> Manager Console</span>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-header">
+            <div class="page-icon help-icon">
+                <div class="help-circles">
+                    <div class="circle green"></div>
+                    <div class="circle blue"></div>
+                </div>
+            </div>
+            <div class="page-title-section">
+                <h1 class="page-title">Help & Escalations</h1>
+                <p class="page-subtitle">Support tickets and FAQs</p>
+            </div>
+            <button class="create-btn">+ New Ticket</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <span class="stat-number">24</span>
+                    <span class="stat-label">Total Tickets</span>
+                </div>
+                <div class="stat-card warning">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Open</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">In Progress</span>
+                </div>
+                <div class="stat-card success">
+                    <span class="stat-number">13</span>
+                    <span class="stat-label">Resolved</span>
+                </div>
+            </div>
+
+            <!-- Help Content Grid -->
+            <div class="help-grid">
+                <!-- Support Tickets -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <h2>Support Tickets</h2>
+                        <div class="search-filter">
+                            <select class="filter-select">
+                                <option>All Status</option>
+                                <option>Open</option>
+                                <option>In Progress</option>
+                                <option>Resolved</option>
+                            </select>
+                            <select class="filter-select">
+                                <option>All Priority</option>
+                                <option>High</option>
+                                <option>Medium</option>
+                                <option>Low</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="tickets-list">
+                        <!-- Ticket Item 1 -->
+                        <div class="ticket-item">
+                            <div class="ticket-priority high"></div>
+                            <div class="ticket-info">
+                                <div class="ticket-header">
+                                    <span class="ticket-id">#TKT-001</span>
+                                    <span class="ticket-status open">Open</span>
+                                </div>
+                                <h4>Unable to access student progress reports</h4>
+                                <p>Getting error when trying to view Grade 7 progress data</p>
+                                <div class="ticket-meta">
+                                    <span>👤 Teacher: Mrs. Johnson</span>
+                                    <span>📅 Jan 17, 2026</span>
+                                </div>
+                            </div>
+                            <div class="ticket-actions">
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn assign">Assign</button>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Item 2 -->
+                        <div class="ticket-item">
+                            <div class="ticket-priority medium"></div>
+                            <div class="ticket-info">
+                                <div class="ticket-header">
+                                    <span class="ticket-id">#TKT-002</span>
+                                    <span class="ticket-status in-progress">In Progress</span>
+                                </div>
+                                <h4>Assignment submission not working</h4>
+                                <p>Students unable to submit assignments through the portal</p>
+                                <div class="ticket-meta">
+                                    <span>👤 Teacher: Mr. Smith</span>
+                                    <span>📅 Jan 16, 2026</span>
+                                </div>
+                            </div>
+                            <div class="ticket-actions">
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn assign">Assign</button>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Item 3 -->
+                        <div class="ticket-item">
+                            <div class="ticket-priority high"></div>
+                            <div class="ticket-info">
+                                <div class="ticket-header">
+                                    <span class="ticket-id">#TKT-003</span>
+                                    <span class="ticket-status open">Open</span>
+                                </div>
+                                <h4>Parent portal login issues</h4>
+                                <p>Multiple parents reporting login failures</p>
+                                <div class="ticket-meta">
+                                    <span>👤 Admin: Support Team</span>
+                                    <span>📅 Jan 17, 2026</span>
+                                </div>
+                            </div>
+                            <div class="ticket-actions">
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn assign">Assign</button>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Item 4 -->
+                        <div class="ticket-item">
+                            <div class="ticket-priority low"></div>
+                            <div class="ticket-info">
+                                <div class="ticket-header">
+                                    <span class="ticket-id">#TKT-004</span>
+                                    <span class="ticket-status resolved">Resolved</span>
+                                </div>
+                                <h4>Request for additional cohort features</h4>
+                                <p>Feature request for bulk student import</p>
+                                <div class="ticket-meta">
+                                    <span>👤 Teacher: Ms. Davis</span>
+                                    <span>📅 Jan 15, 2026</span>
+                                </div>
+                            </div>
+                            <div class="ticket-actions">
+                                <button class="action-btn view">View</button>
+                            </div>
+                        </div>
+
+                        <!-- Ticket Item 5 -->
+                        <div class="ticket-item">
+                            <div class="ticket-priority medium"></div>
+                            <div class="ticket-info">
+                                <div class="ticket-header">
+                                    <span class="ticket-id">#TKT-005</span>
+                                    <span class="ticket-status in-progress">In Progress</span>
+                                </div>
+                                <h4>Screen time policy not applying correctly</h4>
+                                <p>Policy limits not being enforced for some students</p>
+                                <div class="ticket-meta">
+                                    <span>👤 Teacher: Mr. Wilson</span>
+                                    <span>📅 Jan 16, 2026</span>
+                                </div>
+                            </div>
+                            <div class="ticket-actions">
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn assign">Assign</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQs Section -->
+                <div class="content-section faqs-section">
+                    <div class="section-header">
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" placeholder="Search FAQs..." class="search-input full-width">
+                    </div>
+
+                    <div class="faq-categories">
+                        <button class="faq-category active">All</button>
+                        <button class="faq-category">Cohorts</button>
+                        <button class="faq-category">Assignments</button>
+                        <button class="faq-category">Policies</button>
+                        <button class="faq-category">Reports</button>
+                    </div>
+
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>How do I create a new cohort?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>To create a new cohort, go to the Cohorts page and click the "Create New Cohort" button. Fill in the required information including cohort name, grade level, and section. You can also assign a color theme for easy identification.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>How can I assign an assignment to multiple cohorts?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>When creating an assignment, you'll see a "Assign to Cohorts" section with checkboxes. Simply select all the cohorts you want to assign the work to. You can also select "All Cohorts" to assign to everyone.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>How do screen time policies work?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Screen time policies allow you to set daily limits on device usage. You can configure different limits for weekdays and weekends, and set specific active hours. When a student reaches their limit, they'll receive a notification and access will be restricted.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Can I export progress reports?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! Go to the Cohort Progress page and click the "Export Report" button. You can choose to export data for specific cohorts, date ranges, and in various formats including PDF and Excel.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>How do I handle parent approval requests?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Parent approval requests appear in the Approvals section. You can review each request, see the details, and either approve or deny it. Parents will be notified of your decision automatically.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="help-contact">
+                        <h3>Still need help?</h3>
+                        <p>Contact our support team for personalized assistance</p>
+                        <div class="contact-options">
+                            <button class="contact-btn email">📧 Email Support</button>
+                            <button class="contact-btn chat">💬 Live Chat</button>
+                            <button class="contact-btn phone">📞 Call Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- New Ticket Modal -->
+    <div class="modal-overlay" id="createModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Create Support Ticket</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Brief description of the issue" class="form-input">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select class="form-select">
+                            <option>Select Category</option>
+                            <option>Technical Issue</option>
+                            <option>Feature Request</option>
+                            <option>Account Problem</option>
+                            <option>Policy Question</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select class="form-select">
+                            <option>Select Priority</option>
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Provide detailed information about your issue..." class="form-textarea" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Attachments</label>
+                    <div class="file-upload">
+                        <input type="file" id="fileUpload" hidden>
+                        <label for="fileUpload" class="file-upload-label">
+                            📎 Click to upload files or drag and drop
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn-primary">Submit Ticket</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+</body>
+</html>

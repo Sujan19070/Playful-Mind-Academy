@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Billing</title>
+    <link rel="stylesheet" href="orgSettings.css">
+</head>
+<body>
+
+<header class="topbar">
+    <a href="admin.html" class="back-btn">← Back</a>
+    <h1>Billing</h1>
+</header>
+
+<main class="container">
+
+    <div class="card">
+        <h2>Billing Plans</h2>
+
+        <table border="1" cellpadding="10" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Plan Name</th>
+                    <th>Price (BDT)</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody id="planTable"></tbody>
+        </table>
+    </div>
+
+</main>
+
+<script>
+fetch("billingDataAll.php")
+.then(res => res.json())
+.then(data => {
+    let rows = "";
+
+    data.forEach(plan => {
+        rows += `
+        <tr>
+            <td>${plan.plan_name}</td>
+
+            <td contenteditable="true"
+                onblur="updatePrice(${plan.id}, this.innerText)">
+                ${plan.price}
+            </td>
+
+            <td>
+                ${plan.status === 'yes'
+                    ? `<b style="color:green">Yes</b>
+                       <button onclick="setAvailability(${plan.id}, 'no')">
+                           Set No
+                       </button>`
+                    : `<b style="color:red">No</b>
+                       <button onclick="setAvailability(${plan.id}, 'yes')">
+                           Set Yes
+                       </button>`}
+            </td>
+        </tr>
+        `;
+    });
+
+    document.getElementById("planTable").innerHTML = rows;
+});
+    
+function updatePrice(id, price) {
+    fetch("updatePlanPrice.php", {
+        method: "POST",
+        headers: {"Content-Type":"application/x-www-form-urlencoded"},
+        body: "id=" + id + "&price=" + encodeURIComponent(price)
+    });
+}
+
+function setAvailability(id, value) {
+    fetch("updatePlanAvailability.php", {
+        method: "POST",
+        headers: {"Content-Type":"application/x-www-form-urlencoded"},
+        body: "id=" + id + "&value=" + value
+    }).then(() => location.reload());
+}
+</script>
+
+</body>
+</html>

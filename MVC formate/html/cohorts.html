@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cohorts - Playful Academy</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a href="manager.html" class="back-btn">← Back</a>
+                <div class="logo">
+                    <div class="logo-icon">🎒</div>
+                    <span class="logo-text"><strong>Playful Academy</strong> Manager Console</span>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-header">
+            <div class="page-icon cohorts-icon">
+                <div class="circle yellow"></div>
+                <div class="circle blue"></div>
+            </div>
+            <div class="page-title-section">
+                <h1 class="page-title">Cohorts</h1>
+                <p class="page-subtitle">Create and manage groups/classes</p>
+            </div>
+            <button class="create-btn">+ Create New Cohort</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Total Cohorts</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">156</span>
+                    <span class="stat-label">Total Students</span>
+                </div>
+                <div class="stat-card success">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">On Track</span>
+                </div>
+                <div class="stat-card warning">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Needs Attention</span>
+                </div>
+            </div>
+
+            <!-- Cohorts List -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>All Cohorts</h2>
+                    <div class="search-filter">
+                        <input type="text" placeholder="Search cohorts..." class="search-input">
+                        <select class="filter-select">
+                            <option>All Status</option>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cohorts-list">
+                    <!-- Cohort Item 1 -->
+                    <div class="cohort-item">
+                        <div class="cohort-avatar" style="background: linear-gradient(135deg, #7ec8e3, #5ba3c6);">
+                            <span>6A</span>
+                        </div>
+                        <div class="cohort-info">
+                            <h3>Grade 6 - Section A</h3>
+                            <p>42 students • Created Jan 15, 2026</p>
+                        </div>
+                        <div class="cohort-status on-track">
+                            <span class="status-dot"></span>
+                            On Track
+                        </div>
+                        <div class="cohort-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 78%"></div>
+                            </div>
+                            <span>78% Complete</span>
+                        </div>
+                        <div class="cohort-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Cohort Item 2 -->
+                    <div class="cohort-item">
+                        <div class="cohort-avatar" style="background: linear-gradient(135deg, #f5d76e, #e8c547);">
+                            <span>6B</span>
+                        </div>
+                        <div class="cohort-info">
+                            <h3>Grade 6 - Section B</h3>
+                            <p>38 students • Created Jan 15, 2026</p>
+                        </div>
+                        <div class="cohort-status on-track">
+                            <span class="status-dot"></span>
+                            On Track
+                        </div>
+                        <div class="cohort-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 82%"></div>
+                            </div>
+                            <span>82% Complete</span>
+                        </div>
+                        <div class="cohort-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Cohort Item 3 -->
+                    <div class="cohort-item">
+                        <div class="cohort-avatar" style="background: linear-gradient(135deg, #90c695, #6ba36f);">
+                            <span>7A</span>
+                        </div>
+                        <div class="cohort-info">
+                            <h3>Grade 7 - Section A</h3>
+                            <p>40 students • Created Jan 10, 2026</p>
+                        </div>
+                        <div class="cohort-status on-track">
+                            <span class="status-dot"></span>
+                            On Track
+                        </div>
+                        <div class="cohort-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 91%"></div>
+                            </div>
+                            <span>91% Complete</span>
+                        </div>
+                        <div class="cohort-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Cohort Item 4 -->
+                    <div class="cohort-item">
+                        <div class="cohort-avatar" style="background: linear-gradient(135deg, #e67e22, #d35400);">
+                            <span>7B</span>
+                        </div>
+                        <div class="cohort-info">
+                            <h3>Grade 7 - Section B</h3>
+                            <p>36 students • Created Jan 10, 2026</p>
+                        </div>
+                        <div class="cohort-status needs-attention">
+                            <span class="status-dot"></span>
+                            Needs Attention
+                        </div>
+                        <div class="cohort-progress">
+                            <div class="progress-bar-container warning">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <span>45% Complete</span>
+                        </div>
+                        <div class="cohort-actions">
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Create Cohort Modal -->
+    <div class="modal-overlay" id="createModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Create New Cohort</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Cohort Name</label>
+                    <input type="text" placeholder="e.g., Grade 8 - Section A" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Enter cohort description..." class="form-textarea"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Grade Level</label>
+                        <select class="form-select">
+                            <option>Select Grade</option>
+                            <option>Grade 6</option>
+                            <option>Grade 7</option>
+                            <option>Grade 8</option>
+                            <option>Grade 9</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Section</label>
+                        <input type="text" placeholder="e.g., A, B, C" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Color Theme</label>
+                    <div class="color-options">
+                        <button class="color-btn" style="background: #7ec8e3"></button>
+                        <button class="color-btn" style="background: #f5d76e"></button>
+                        <button class="color-btn" style="background: #90c695"></button>
+                        <button class="color-btn" style="background: #e67e22"></button>
+                        <button class="color-btn" style="background: #9b59b6"></button>
+                        <button class="color-btn" style="background: #e74c3c"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn-primary">Create Cohort</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+</body>
+</html>

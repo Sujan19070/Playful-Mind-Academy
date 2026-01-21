@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Registration</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#fff3e0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.box{
+    background:white;
+    padding:30px;
+    width:320px;
+    border-radius:10px;
+}
+input,button{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Register Admin</h2>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="register()">Register</button>
+    <p id="msg"></p>
+</div>
+
+<script>
+function register(){
+    let u = document.getElementById("username").value;
+    let p = document.getElementById("password").value;
+
+    fetch("register.php",{
+        method:"POST",
+        headers:{"Content-Type":"application/x-www-form-urlencoded"},
+        body:"username="+u+"&password="+p
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        document.getElementById("msg").innerText = data.message;
+    });
+}
+</script>
+
+</body>
+</html>

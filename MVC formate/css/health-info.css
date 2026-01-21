@@ -1,0 +1,88 @@
+:root {
+    --bg: #fffdf6;
+    --primary: #6cc48a;
+    --accent: #ffd27a;
+    --card: #ffe6c9;
+    --text: #2d2d2d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+}
+
+.hi-hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hi-hero h1 {
+    font-size: 2.5rem;
+    color: #3a7b5a;
+}
+
+.hi-hero p {
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+.hi-filter {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hi-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    background: var(--accent);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hi-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.hi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hi-card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.hi-card:hover { transform: translateY(-4px); }
+
+.hi-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hi-open {
+    margin-top: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}

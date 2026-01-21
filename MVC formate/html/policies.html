@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cohort Policies - Playful Academy</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a href="manager.html" class="back-btn">← Back</a>
+                <div class="logo">
+                    <div class="logo-icon">🎒</div>
+                    <span class="logo-text"><strong>Playful Academy</strong> Manager Console</span>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </header>
+
+        <!-- Page Title -->
+        <div class="page-header">
+            <div class="page-icon policies-icon">
+                <div class="checkmarks">
+                    <span>✓</span><span>✓</span><span>✓</span><span>✓</span><span>✓</span>
+                </div>
+            </div>
+            <div class="page-title-section">
+                <h1 class="page-title">Cohort Policies</h1>
+                <p class="page-subtitle">Screen/content within limits</p>
+            </div>
+            <button class="create-btn">+ Create Policy</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <!-- Policy Overview -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Active Policies</span>
+                </div>
+                <div class="stat-card success">
+                    <span class="stat-number">156</span>
+                    <span class="stat-label">Students Covered</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Violations Today</span>
+                </div>
+                <div class="stat-card warning">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Pending Reviews</span>
+                </div>
+            </div>
+
+            <!-- Policy Categories -->
+            <div class="policy-categories">
+                <div class="policy-category">
+                    <div class="category-icon">⏰</div>
+                    <h3>Screen Time</h3>
+                    <p>Manage daily usage limits</p>
+                    <span class="category-count">3 policies</span>
+                </div>
+                <div class="policy-category">
+                    <div class="category-icon">🔒</div>
+                    <h3>Content Filters</h3>
+                    <p>Block inappropriate content</p>
+                    <span class="category-count">2 policies</span>
+                </div>
+                <div class="policy-category">
+                    <div class="category-icon">📱</div>
+                    <h3>App Restrictions</h3>
+                    <p>Control app access</p>
+                    <span class="category-count">2 policies</span>
+                </div>
+                <div class="policy-category">
+                    <div class="category-icon">🌐</div>
+                    <h3>Web Access</h3>
+                    <p>Manage website access</p>
+                    <span class="category-count">1 policy</span>
+                </div>
+            </div>
+
+            <!-- Active Policies -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Active Policies</h2>
+                    <div class="search-filter">
+                        <input type="text" placeholder="Search policies..." class="search-input">
+                        <select class="filter-select">
+                            <option>All Categories</option>
+                            <option>Screen Time</option>
+                            <option>Content Filters</option>
+                            <option>App Restrictions</option>
+                            <option>Web Access</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="policies-list">
+                    <!-- Policy Item 1 -->
+                    <div class="policy-item">
+                        <div class="policy-icon screen-time">⏰</div>
+                        <div class="policy-info">
+                            <h3>Daily Screen Time Limit</h3>
+                            <p>Maximum 4 hours of screen time per day during school days</p>
+                            <div class="policy-meta">
+                                <span class="meta-item">📚 All Cohorts</span>
+                                <span class="meta-item">👥 156 students</span>
+                            </div>
+                        </div>
+                        <div class="policy-settings">
+                            <div class="setting-item">
+                                <span class="setting-label">Limit</span>
+                                <span class="setting-value">4 hours</span>
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Active</span>
+                                <span class="setting-value">Mon-Fri</span>
+                            </div>
+                        </div>
+                        <div class="policy-toggle">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="policy-actions">
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Policy Item 2 -->
+                    <div class="policy-item">
+                        <div class="policy-icon content-filter">🔒</div>
+                        <div class="policy-info">
+                            <h3>Safe Search Enforcement</h3>
+                            <p>Enable safe search on all search engines</p>
+                            <div class="policy-meta">
+                                <span class="meta-item">📚 All Cohorts</span>
+                                <span class="meta-item">👥 156 students</span>
+                            </div>
+                        </div>
+                        <div class="policy-settings">
+                            <div class="setting-item">
+                                <span class="setting-label">Level</span>
+                                <span class="setting-value">Strict</span>
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Active</span>
+                                <span class="setting-value">Always</span>
+                            </div>
+                        </div>
+                        <div class="policy-toggle">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="policy-actions">
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Policy Item 3 -->
+                    <div class="policy-item">
+                        <div class="policy-icon app-restriction">📱</div>
+                        <div class="policy-info">
+                            <h3>Social Media Block</h3>
+                            <p>Block access to social media apps during school hours</p>
+                            <div class="policy-meta">
+                                <span class="meta-item">📚 Grade 6 Cohorts</span>
+                                <span class="meta-item">👥 80 students</span>
+                            </div>
+                        </div>
+                        <div class="policy-settings">
+                            <div class="setting-item">
+                                <span class="setting-label">Apps</span>
+                                <span class="setting-value">5 blocked</span>
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Active</span>
+                                <span class="setting-value">8AM-3PM</span>
+                            </div>
+                        </div>
+                        <div class="policy-toggle">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="policy-actions">
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Policy Item 4 -->
+                    <div class="policy-item">
+                        <div class="policy-icon web-access">🌐</div>
+                        <div class="policy-info">
+                            <h3>Educational Sites Only</h3>
+                            <p>Allow only whitelisted educational websites</p>
+                            <div class="policy-meta">
+                                <span class="meta-item">📚 Grade 7 - Section B</span>
+                                <span class="meta-item">👥 36 students</span>
+                            </div>
+                        </div>
+                        <div class="policy-settings">
+                            <div class="setting-item">
+                                <span class="setting-label">Sites</span>
+                                <span class="setting-value">25 allowed</span>
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Active</span>
+                                <span class="setting-value">School Hours</span>
+                            </div>
+                        </div>
+                        <div class="policy-toggle">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="policy-actions">
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+
+                    <!-- Policy Item 5 -->
+                    <div class="policy-item">
+                        <div class="policy-icon screen-time">⏰</div>
+                        <div class="policy-info">
+                            <h3>Weekend Extended Time</h3>
+                            <p>Extended screen time allowance for weekends</p>
+                            <div class="policy-meta">
+                                <span class="meta-item">📚 All Cohorts</span>
+                                <span class="meta-item">👥 156 students</span>
+                            </div>
+                        </div>
+                        <div class="policy-settings">
+                            <div class="setting-item">
+                                <span class="setting-label">Limit</span>
+                                <span class="setting-value">6 hours</span>
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Active</span>
+                                <span class="setting-value">Sat-Sun</span>
+                            </div>
+                        </div>
+                        <div class="policy-toggle">
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="policy-actions">
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn more">⋮</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Violations -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Recent Violations</h2>
+                    <a href="#" class="view-all-link">View All →</a>
+                </div>
+                <div class="violations-list">
+                    <div class="violation-item">
+                        <div class="violation-icon">⚠️</div>
+                        <div class="violation-info">
+                            <h4>Screen Time Exceeded</h4>
+                            <p>Student exceeded daily limit by 45 minutes</p>
+                        </div>
+                        <div class="violation-meta">
+                            <span>Grade 7 - Section B</span>
+                            <span>Today, 2:30 PM</span>
+                        </div>
+                        <button class="action-btn review">Review</button>
+                    </div>
+                    <div class="violation-item">
+                        <div class="violation-icon">⚠️</div>
+                        <div class="violation-info">
+                            <h4>Blocked Site Access Attempt</h4>
+                            <p>Attempted to access blocked social media site</p>
+                        </div>
+                        <div class="violation-meta">
+                            <span>Grade 6 - Section A</span>
+                            <span>Today, 11:15 AM</span>
+                        </div>
+                        <button class="action-btn review">Review</button>
+                    </div>
+                    <div class="violation-item">
+                        <div class="violation-icon">⚠️</div>
+                        <div class="violation-info">
+                            <h4>App Installation Blocked</h4>
+                            <p>Attempted to install restricted gaming app</p>
+                        </div>
+                        <div class="violation-meta">
+                            <span>Grade 6 - Section B</span>
+                            <span>Yesterday, 4:20 PM</span>
+                        </div>
+                        <button class="action-btn review">Review</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Create Policy Modal -->
+    <div class="modal-overlay" id="createModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Create New Policy</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Policy Name</label>
+                    <input type="text" placeholder="Enter policy name" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Policy Type</label>
+                    <select class="form-select">
+                        <option>Select Type</option>
+                        <option>Screen Time</option>
+                        <option>Content Filter</option>
+                        <option>App Restriction</option>
+                        <option>Web Access</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Enter policy description..." class="form-textarea"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Apply to Cohorts</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox"> All Cohorts
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 6 - Section A
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 6 - Section B
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 7 - Section A
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox"> Grade 7 - Section B
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn-primary">Create Policy</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pages.js"></script>
+</body>
+</html>
